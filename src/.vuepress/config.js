@@ -10,6 +10,10 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
+        text: 'Кейсы',
+        link: '/cases/',
+      },
+      {
         text: '1С-Битрикс',
         link: '/bitrix/',
       },
@@ -23,6 +27,16 @@ module.exports = {
       },
     ],
     sidebar: {
+      '/cases/': [
+        {
+          title: 'Кейсы',
+          collapsable: false,
+          children: [
+            'qq-agency',
+            'lang-school',
+          ],
+        },
+      ],
       '/bitrix/': [
         {
           title: '1С-Битрикс',
