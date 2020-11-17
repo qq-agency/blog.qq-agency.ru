@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - dev
+
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
@@ -12,13 +12,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
+      - name: Install Yarn
+        uses: borales/actions-yarn@v2.0.0
+        with:
+          cmd: install
+
       - name: Build and Deploy
         uses: JamesIves/github-pages-deploy-action@master
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
-          FOLDER: dist
-          BUILD_SCRIPT: npm install && vuepress build src
+          FOLDER: src/.vuepress/dist
+          BUILD_SCRIPT: yarn run build
+          REPOSITORY_NAME: qq-agency/blog.qq-agency.ru
           CNAME: blog.qq-agency.ru
-          COMMIT_EMAIL: sergey@php.net
-          COMMIT_NAME: Sergey Panteleev
+          COMMIT_EMAIL: git@qq-agency.ru
+          COMMIT_NAME: QQ
