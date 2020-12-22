@@ -34,6 +34,7 @@ module.exports = {
           children: [
             'qq-agency',
             'selcab',
+            'neodent.md',
             'lang-school',
           ],
         },
