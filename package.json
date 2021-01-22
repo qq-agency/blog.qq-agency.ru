@@ -1,6 +1,6 @@
 {
   "name": "blog.qq-agency.ru",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "QQ blog",
   "main": "index.js",
   "authors": {
@@ -14,7 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "vuepress": "^1.5.3",
+    "vuepress": "^1.8.0",
     "vuepress-plugin-metrika": "1.0.2"
   }
 }
